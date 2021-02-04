@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import './scss/bootstrap';
+body,html{
+	background-color:#0e7369;
+	margin:0;
+	padding:0;
+	height:100%;
+	width:100%;
+	font-family:Lato;
+	color:#f2f2f2;
+	user-select: none;
+
+}
+a{
+	text-decoration: none;
+}
+.box{
+	height:100%;
+	width:100%;
+  display: flex;
+  align-items: center;
+}
+h1{
+	font-size:50px;
+}
+input{
+	font-size:15px;
+}
+.button{
+	margin-top:20px;
+	padding:10px;
+	border: 0px;
+	border-radius:2px;
+	background-color:#0e5b53;
+	font-weight:350;
+	color:#fffdf3;
+	font-size:35px;
+}
+.button:hover{
+	background-color:#0e7369;
+}
+.cont{
+	background-color:#0e7369;
+	font-size: 70px;
+	text-align: center;
+}
+
+#left_login{
+  margin-left: 3%;
+  border-radius: 2px;
+  display: flex;
+  width: 30%;
+  height: 80%;
+  background-color:#f3f3f3;
+  justify-content: center;
+  align-self:center;
+  align-items:center;
+}
+.dialog{
+  width:70%;
+}
+
+/* INPUT */
+$primary: #0e7369;
+$secondary: #38ef7d;
+$white: #fff;
+$gray: #9b9b9b;
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  padding: 7px 0;
+  color:$gray;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+  }
+  padding-bottom: 6px;
+  border-width: 3px;
+  color: $primary;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+/* END INPUT */
