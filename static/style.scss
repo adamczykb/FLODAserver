@@ -1,74 +1,143 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
-@import './scss/bootstrap';
-body,html{
-	background-color:#0e7369;
-	margin:0;
-	padding:0;
-	height:100%;
-	width:100%;
-	font-family:Lato;
-	color:#f2f2f2;
-	user-select: none;
+@import 'css/bootstrap.css';
+
+
+body, html {
+  background: rgb(14, 115, 105);
+  background: linear-gradient(270deg, rgba(14, 115, 105, 1) 36%, rgba(14, 91, 83, 1) 100%);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Lato;
+  color: #f2f2f2;
+  user-select: none;
 
 }
-a{
-	text-decoration: none;
+
+#info_content {
+  font-size: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
-.box{
-	height:100%;
-	width:100%;
+
+
+a {
+  text-decoration: none;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
 }
-h1{
-	font-size:50px;
-}
-input{
-	font-size:15px;
-}
-.button{
-	margin-top:20px;
-	padding:10px;
-	border: 0px;
-	border-radius:2px;
-	background-color:#0e5b53;
-	font-weight:350;
-	color:#fffdf3;
-	font-size:35px;
-}
-.button:hover{
-	background-color:#0e7369;
-}
-.cont{
-	background-color:#0e7369;
-	font-size: 70px;
-	text-align: center;
+
+h1 {
+  font-size: 50px;
 }
 
-#left_login{
-  margin-left: 3%;
-  border-radius: 2px;
-  display: flex;
-  width: 30%;
-  height: 80%;
-  background-color:#f3f3f3;
-  justify-content: center;
-  align-self:center;
-  align-items:center;
+input {
+  font-size: 15px;
 }
-.dialog{
-  width:70%;
+
+.button {
+  margin-top: 20px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 2px;
+  background-color: #0e5b53;
+  font-weight: 350;
+  color: #fffdf3;
+  font-size: 35px;
+}
+
+#title_login_pane {
+  width: 35%;
+  padding: 30px 0px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title_login_pane img {
+  width: 100%;
+}
+
+#forgotten_passowrd {
+  width: 100%;
+  color: grey;
+  text-align: right;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+#forgotten_passowrd a {
+  text-decoration: none;
+  color: grey;
+}
+
+#buttonLo {
+  background: rgb(176, 42, 156);
+  background: linear-gradient(270deg, rgba(176, 42, 156, 1) 36%, rgba(186, 83, 171, 1) 85%);
+  font-size: 20px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 5px 30px;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#buttonRe {
+  background: rgb(176, 42, 156);
+  background: linear-gradient(270deg, rgba(176, 42, 156, 1) 36%, rgba(186, 83, 171, 1) 85%);
+  font-size: 20px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px 30px;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 1000ms linear;
+}
+
+#buttonLo:hover, #buttonRe:hover {
+transition: background-color 1000ms linear;
+  background: rgb(176, 42, 156);
+  background: linear-gradient(270deg, #B02A9C 36%, #AA4B9D 85%);
+}
+
+.cont {
+  background-color: #0e7369;
+  font-size: 70px;
+  text-align: center;
+}
+
+#left_login {
+  margin-left: 3%;
+  border-radius: 6px;
+  display: flex;
+  width: 430px;
+  background-color: #f3f3f3;
+  justify-content: center;
+  align-self: center;
+  padding: 40px;
+}
+
+.dialog {
+  width: 100%;
 }
 
 /* INPUT */
 $primary: #0e7369;
-$secondary: #38ef7d;
+$secondary: rgba(14, 91, 83, 1);
 $white: #fff;
-$gray: #9b9b9b;
+$gray: #0e7369;
 .form__group {
   position: relative;
   padding: 15px 0 0;
-  margin-top: 10px;
+  margin-top: 17px;
 }
 
 .form__field {
@@ -76,10 +145,11 @@ $gray: #9b9b9b;
   width: 100%;
   border: 0;
   border-bottom: 2px solid $gray;
+  border-radius: 2px;
   outline: 0;
-  font-size: 1.3rem;
+  font-size: 20px;
   padding: 7px 0;
-  color:$gray;
+  color: $gray;
   background: transparent;
   transition: border-color 0.2s;
 
@@ -88,9 +158,9 @@ $gray: #9b9b9b;
   }
 
   &:placeholder-shown ~ .form__label {
-    font-size: 1.3rem;
+    font-size: 17px;
     cursor: text;
-    top: 20px;
+    top: 28px;
   }
 }
 
@@ -112,15 +182,19 @@ $gray: #9b9b9b;
     font-size: 1rem;
     color: $primary;
   }
+
   padding-bottom: 6px;
   border-width: 3px;
   color: $primary;
-  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image: linear-gradient(to right, $secondary, $primary);
   border-image-slice: 1;
 }
+
 /* reset input */
-.form__field{
-  &:required,&:invalid { box-shadow:none; }
+.form__field {
+  &:required, &:invalid {
+    box-shadow: none;
+  }
 }
 
 /* END INPUT */

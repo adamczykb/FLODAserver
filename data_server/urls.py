@@ -17,5 +17,6 @@ from django.urls import path
 import data_server.views
 
 urlpatterns = [
-    path('', data_server.views.index, name='test')
+    path('', data_server.views.index, name='test'),
+    path('login', data_server.views.login_view, name='login')
 ]

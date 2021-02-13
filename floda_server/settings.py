@@ -98,6 +98,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_REDIRECT_URL = 'admin'
+LOGOUT_REDIRECT_URL = '/'
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -122,9 +124,9 @@ STATICFILES_FINDERS = (
 )
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    os.path.join(BASE_DIR, 'static'),
 ]
 
 
-STATIC_ROOT = os.getenv('STATIC_ROOT', os.path.join(BASE_DIR, 'static'))
 COMPRESS_ENABLED = True
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')

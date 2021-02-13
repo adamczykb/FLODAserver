@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+@import url(/static/css/bootstrap.css?9fafd9bdda4c);
+/* line 5, static/style.scss */
+body, html {
+  background: #0e7369;
+  background: linear-gradient(270deg, #0e7369 36%, #0e5b53 100%);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Lato;
+  color: #f2f2f2;
+  user-select: none; }
+
+/* line 18, static/style.scss */
+#info_content {
+  font-size: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+/* line 26, static/style.scss */
+a {
+  text-decoration: none; }
+
+/* line 30, static/style.scss */
+.box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center; }
+
+/* line 37, static/style.scss */
+h1 {
+  font-size: 50px; }
+
+/* line 41, static/style.scss */
+input {
+  font-size: 15px; }
+
+/* line 45, static/style.scss */
+.button {
+  margin-top: 20px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 2px;
+  background-color: #0e5b53;
+  font-weight: 350;
+  color: #fffdf3;
+  font-size: 35px; }
+
+/* line 56, static/style.scss */
+#title_login_pane {
+  width: 35%;
+  padding: 30px 0px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 63, static/style.scss */
+#title_login_pane img {
+  width: 100%; }
+
+/* line 67, static/style.scss */
+#forgotten_passowrd {
+  width: 100%;
+  color: grey;
+  text-align: right;
+  font-size: 13px;
+  margin-top: 3px; }
+
+/* line 75, static/style.scss */
+#forgotten_passowrd a {
+  text-decoration: none;
+  color: grey; }
+
+/* line 80, static/style.scss */
+#buttonLo {
+  background: #b02a9c;
+  background: linear-gradient(270deg, #b02a9c 36%, #ba53ab 85%);
+  font-size: 20px;
+  width: 100%;
+  margin-top: 50px;
+  padding: 5px 30px;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* line 92, static/style.scss */
+#buttonRe {
+  background: #b02a9c;
+  background: linear-gradient(270deg, #b02a9c 36%, #ba53ab 85%);
+  font-size: 20px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5px 30px;
+  border-radius: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 1000ms linear; }
+
+/* line 105, static/style.scss */
+#buttonLo:hover, #buttonRe:hover {
+  transition: background-color 1000ms linear;
+  background: #b02a9c;
+  background: linear-gradient(270deg, #B02A9C 36%, #AA4B9D 85%); }
+
+/* line 111, static/style.scss */
+.cont {
+  background-color: #0e7369;
+  font-size: 70px;
+  text-align: center; }
+
+/* line 117, static/style.scss */
+#left_login {
+  margin-left: 3%;
+  border-radius: 6px;
+  display: flex;
+  width: 430px;
+  height: 650px;
+  background-color: #f3f3f3;
+  justify-content: center;
+  align-self: center;
+  padding: 40px; }
+
+/* line 129, static/style.scss */
+.dialog {
+  width: 100%; }
+
+/* INPUT */
+/* line 138, static/style.scss */
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 17px; }
+
+/* line 144, static/style.scss */
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #0e7369;
+  border-radius: 2px;
+  outline: 0;
+  font-size: 20px;
+  padding: 7px 0;
+  color: #0e7369;
+  background: transparent;
+  transition: border-color 0.2s; }
+  /* line 157, static/style.scss */
+  .form__field::placeholder {
+    color: transparent; }
+  /* line 161, static/style.scss */
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 28px; }
+
+/* line 168, static/style.scss */
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #0e7369; }
+
+/* line 177, static/style.scss */
+.form__field:focus {
+  padding-bottom: 6px;
+  border-width: 3px;
+  color: #0e7369;
+  border-image: linear-gradient(to right, #0e5b53, #0e7369);
+  border-image-slice: 1; }
+  /* line 178, static/style.scss */
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #0e7369; }
+
+/* reset input */
+/* line 196, static/style.scss */
+.form__field:required, .form__field:invalid {
+  box-shadow: none; }
+
+/* END INPUT */
