@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class DataserverConfig(AppConfig):
+class DataServerConfig(AppConfig):
     name = 'data_server'

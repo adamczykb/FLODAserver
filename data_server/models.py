@@ -2,7 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-# Create your models here.
 class TypeOfLightning(models.Model):
     name = models.CharField(max_length=255)
     fro = models.FloatField()
@@ -37,17 +36,17 @@ class WateringDetail(models.Model):
 class DeclaredSpecies(models.Model):
     name = models.CharField(max_length=255)
     author = models.ForeignKey(to=User, on_delete=models.CASCADE)
-    display = models.BooleanField(default=True)
-    created_time = models.DateTimeField(auto_now=True)
     light = models.ForeignKey(to=LightningDetail, on_delete=models.CASCADE)
     temperature = models.ForeignKey(to=TemperatureDetail, on_delete=models.CASCADE)
     humidity = models.ForeignKey(to=HumidityDetail, on_delete=models.CASCADE)
     is_public = models.BooleanField(default=True)
+    created_time = models.DateTimeField(auto_now=True)
+    display = models.BooleanField(default=True)
 
 
 class Devices(models.Model):
-    added = models.DateTimeField(auto_now=True)
-    SDID = models.CharField(max_length=50, verbose_name="Numer idenrtfikacyjny urządzenia")
+    device_id = models.CharField(max_length=50, verbose_name="Numer idenrtfikacyjny urządzenia")
+    addedTimestamp = models.DateTimeField(auto_now=True)
 
 
 class States(models.Model):
@@ -64,4 +63,10 @@ class UserConfigurations(models.Model):
     author = models.ForeignKey(to=User, on_delete=models.DO_NOTHING)
     device_id = models.ForeignKey(to=Devices, on_delete=models.DO_NOTHING)
     species = models.ForeignKey(to=DeclaredSpecies, on_delete=models.DO_NOTHING)
-    overview = models.ForeignKey(to=States, on_delete=models.DO_NOTHING)
+    measurements = models.ForeignKey(to=States, on_delete=models.DO_NOTHING)
+
+
+class MobileTokenSession(models.Model):
+    user_account = models.ForeignKey(to=User, on_delete=models.CASCADE)
+    token = models.CharField(max_length=255, unique=True)
+    createdTimestamp = models.DateTimeField(auto_now=True)

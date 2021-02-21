@@ -19,5 +19,6 @@ from data_server import urls as data
 urlpatterns = [
     path('admin/', admin.site.urls, name="admin"),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', include(data))
+    path('', include(data),name="webpage"),
+    path('mobile/', include('data_server.urls_mobile'),name="mobile")
 ]
